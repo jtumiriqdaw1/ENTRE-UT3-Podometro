@@ -3,20 +3,62 @@
  * acerca de los pasos, distancia, ..... que una persona (hombre o mujer)
  * ha dado en una semana. 
  * 
- * @author    - pon aquí tu nombre - 
+ * @author    - Jhoselin Tumiri Quiroz- 
  * 
  */
 public class Podometro {
-   
+    //indica el sexo de una persona
+    static final char HOMBRE = 'H';
+    static final char MUJER = 'M';
+    //
+    static final double ZANCADA_HOMBRE = 0.45;
+    static final double ZANCADA_MUJER = 0.41;
+    //indica el nº de día de la semana
+    static final int SABADO = 6;
+    static final int DOMINGO = 7;
+    //atributos
+    //
+    private string marca;
+    private double altura;
+    private char sexo;
+    private double longitudZancada;
+    //pasos dados
+    private int totalPasosLaborables;
+    private int totalPasosSabado;
+    private int totalPasosDomingo;
+    //distancias de recorrids
+    private double totalDistanciaSemana;
+    private double totalDistanciaFinSemana;
+    //tiempos de recorridos
+    private int tiempo;
+    private int caminatasNoches;
     
+    
+  
     
 
     /**
      * Inicializa el podómetro con la marca indicada por el parámetro.
      * El resto de atributos se ponen a 0 y el sexo, por defecto, es mujer
      */
-    public Podometro() {
-
+    public Podometro(string nombreMarca) {
+            marca = nombreMarca;
+            altura = 0;
+            sexo ='M';
+            longitudZancada = 0;
+            totalPasosLaborables = 0;
+            totalPasosSabado = 0;
+            totalPasosDomingo = 0;
+            totalDistanciaSemana = 0;
+            totalDistanciaFinSemana = 0;
+            tiempo = 0;
+            caminatasNoches = 0;
+            
+            
+            
+            
+           
+            
          
     }
 
@@ -24,8 +66,8 @@ public class Podometro {
      * accesor para la marca
      *  
      */
-    public    getMarca() {
-
+    public getMarca() {
+        return marca;
         
 
     }
