@@ -6,7 +6,7 @@
  * @author    - Jhoselin Tumiri Quiroz- 
  * 
  */
-public class Podometro {
+   public class Podometro {
     //indica el sexo de una persona
     private final char HOMBRE = 'H';
     private final char MUJER = 'M';
@@ -18,7 +18,7 @@ public class Podometro {
     private final int DOMINGO = 7;
     //atributos
     //
-    private string marca;
+    private String marca;
     private double altura;
     private char sexo;
     private double longitudZancada;
@@ -26,7 +26,7 @@ public class Podometro {
     private int totalPasosLaborables;
     private int totalPasosSabado;
     private int totalPasosDomingo;
-    //distancias de recorrids
+    //distancias de recorridos
     private double totalDistanciaSemana;
     private double totalDistanciaFinSemana;
     //tiempos de recorridos
@@ -41,7 +41,7 @@ public class Podometro {
      * Inicializa el podómetro con la marca indicada por el parámetro.
      * El resto de atributos se ponen a 0 y el sexo, por defecto, es mujer
      */
-    public Podometro(string nombreMarca) {
+    public Podometro(String nombreMarca) {
             marca = nombreMarca;
             altura = 0;
             sexo ='M';
@@ -64,10 +64,10 @@ public class Podometro {
     }
 
     /**
-     * accesor para la marca
+     * Accesor para la marca
      *  
      */
-    public  getMarca() {
+    public String getMarca(){
         return marca;
         
 
@@ -145,7 +145,10 @@ public class Podometro {
         
         
 
+    
     }
+    
+  
 
     /**
      * Restablecer los valores iniciales del podómetro
