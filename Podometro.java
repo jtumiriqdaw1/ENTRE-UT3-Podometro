@@ -8,14 +8,14 @@
  */
 public class Podometro {
     //indica el sexo de una persona
-    static final char HOMBRE = 'H';
-    static final char MUJER = 'M';
+    private final char HOMBRE = 'H';
+    private final char MUJER = 'M';
     //
-    static final double ZANCADA_HOMBRE = 0.45;
-    static final double ZANCADA_MUJER = 0.41;
+    private final double ZANCADA_HOMBRE = 0.45;
+    private final double ZANCADA_MUJER = 0.41;
     //indica el nº de día de la semana
-    static final int SABADO = 6;
-    static final int DOMINGO = 7;
+    private final int SABADO = 6;
+    private final int DOMINGO = 7;
     //atributos
     //
     private string marca;
@@ -57,6 +57,7 @@ public class Podometro {
             
             
             
+            
            
             
          
@@ -66,7 +67,7 @@ public class Podometro {
      * accesor para la marca
      *  
      */
-    public getMarca() {
+    public  getMarca() {
         return marca;
         
 
@@ -82,11 +83,13 @@ public class Podometro {
      *  
      */
     public void configurar(double queAltura, char queSexo) {
-
+         int altura;
+         char sexo;
+         
         
     }
 
-     /**
+    /**
      *  Recibe cuatro parámetros que supondremos correctos:
      *    pasos - el nº de pasos caminados
      *    dia - nº de día de la semana en que se ha hecho la caminata 
@@ -101,8 +104,7 @@ public class Podometro {
      */
     public void registrarCaminata(int pasos, int dia, int horaInicio,
                             int horaFin) {
-
-        
+            
 
     }
     
