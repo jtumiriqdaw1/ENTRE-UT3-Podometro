@@ -84,13 +84,13 @@ public class Podometro
      *  
      */
     public void configurar(double queAltura, char queSexo) {
-         altura= queAltura;
-         sexo= queSexo;
-         longitudZancada = 0;
-         if (queSexo == 'M' ) {
+            altura= queAltura;
+            sexo= queSexo;
+            longitudZancada = 0;
+            if (queSexo == 'M' ) {
                 Math.floor (queAltura * ZANCADA_MUJER); 
             }
-         else if (queSexo == 'H'){
+            else if (queSexo == 'H'){
                Math.ceil (queAltura * ZANCADA_HOMBRE); 
             }
     }
@@ -122,7 +122,12 @@ public class Podometro
      *  
      */
     public void printConfiguracion() {
-        System.out.println(altura +
+        double alturaMtrs = altura / 100;
+        String quesexo;
+        double longitudZancadaMtrs = longitudZancada /100; 
+         System.out.println("configuración del podómetro ********************************************" + "\n Altura" + ":" + alturaMtrs + "Mtrs" +  
+                            "\n Sexo " + ":" + sexo + "\n Longitud zancada" + ":" + longitudZancadaMtrs + "Mtrs");
+        
        
 
     }
