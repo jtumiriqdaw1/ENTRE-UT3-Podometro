@@ -6,7 +6,8 @@
  * @author    - Jhoselin Tumiri Quiroz- 
  * 
  */
-   public class Podometro {
+public class Podometro 
+{
     //indica el sexo de una persona
     private final char HOMBRE = 'H';
     private final char MUJER = 'M';
@@ -82,11 +83,16 @@
      * (leer enunciado)
      *  
      */
-    public void configurar(double queAltura, char queSexo) {
-         int altura;
-         char sexo;
-         
-        
+    public void configurar(double queAltura, char queSexo,double queLongitud) {
+         double altura= queAltura;
+         char sexo= queSexo;
+         double longitudZancada = queLongitud;
+         if (queSexo == 'M' ) {
+                Math.floor (100 * queAltura / 41); 
+            }
+         else if (queSexo == 'H'){
+               Math.ceil (100 * queAltura / 45); 
+            }
     }
 
     /**
@@ -133,23 +139,19 @@
         
 
     }
-
-   
-
+    
     /**
      *  Calcula y devuelve un String que representa el nombre del día
      *  en el que se ha caminado más pasos - "SÁBADO"   "DOMINGO" o  "LABORABLES"
      */
     public String diaMayorNumeroPasos() {
-
+        
         
         
 
     
-    }
+    } 
     
-  
-
     /**
      * Restablecer los valores iniciales del podómetro
      * Todos los atributos se ponen a cero salvo el sexo
