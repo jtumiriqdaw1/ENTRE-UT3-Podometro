@@ -96,7 +96,7 @@ public class Podometro
             }
     }
 
-    /**
+     /**
      *  Recibe cuatro parámetros que supondremos correctos:
      *    pasos - el nº de pasos caminados
      *    dia - nº de día de la semana en que se ha hecho la caminata 
@@ -111,37 +111,39 @@ public class Podometro
      */
     public void registrarCaminata(int pasos, int dia, int horaInicio,
                             int horaFin) {
-           pasos = totalPasosLaborables + totalPasosSabado + totalPasosDomingo; 
           
-           int totalPasosSabado;
-           switch (dia ){
-            case 1:
-            case 2:
-            case 3:
-            case 5:
-            case 6:  
+          
+            String nombreDia;
+            switch (dia ){
+            case 1: nombreDia = "Lunes";
             break;
-            case 7:  
+            case 2: nombreDia = "Martes";
             break;
+            case 3: nombreDia = "Miércoles";
+            break;
+            case 4: nombreDia = "Jueves";
+            break;
+            case 5: nombreDia = "Viernes";
+            break;
+            case 6: String SABADO;
+            break;
+            default: String DOMINGO;
+            break; 
+            
             
             
             
             }
-          
-         
-         
-            
-
-    }
+        }
     
-     /**
-     * Muestra en pantalla la configuración del podómetro
-     * (altura, sexo y longitud de la zancada)
-     * 
-     * (ver enunciado)
-     *  
-     */
-    public void printConfiguracion() {
+    /**
+    * Muestra en pantalla la configuración del podómetro
+    * (altura, sexo y longitud de la zancada)
+    * 
+    * (ver enunciado)
+    *  
+    */
+        public void printConfiguracion() {
         double alturaMtrs = altura / 100;
         String quesexo;
         double longitudZancadaMtrs = longitudZancada /100; 
@@ -170,16 +172,14 @@ public class Podometro
      *  en el que se ha caminado más pasos - "SÁBADO"   "DOMINGO" o  "LABORABLES"
      */
     public String diaMayorNumeroPasos() {
+    
         
-        return "a";
+        return "a";//(para que compile mientras)
     
         
 
     
-    } 
-   
-    
-    
+    }
     
     /**
      * Restablecer los valores iniciales del podómetro
