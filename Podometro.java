@@ -1,3 +1,4 @@
+
 /**
  * La clase modela un sencillo podómetro que registra información
  * acerca de los pasos, distancia, ..... que una persona (hombre o mujer)
@@ -110,6 +111,25 @@ public class Podometro
      */
     public void registrarCaminata(int pasos, int dia, int horaInicio,
                             int horaFin) {
+           pasos = totalPasosLaborables + totalPasosSabado + totalPasosDomingo; 
+          
+           int totalPasosSabado;
+           switch (dia ){
+            case 1:
+            case 2:
+            case 3:
+            case 5:
+            case 6:  
+            break;
+            case 7:  
+            break;
+            
+            
+            
+            }
+          
+         
+         
             
 
     }
@@ -125,10 +145,10 @@ public class Podometro
         double alturaMtrs = altura / 100;
         String quesexo;
         double longitudZancadaMtrs = longitudZancada /100; 
-         System.out.println("configuración del podómetro ********************************************" + "\n Altura" + ":" + alturaMtrs + "Mtrs" +  
-                            "\n Sexo " + ":" + sexo + "\n Longitud zancada" + ":" + longitudZancadaMtrs + "Mtrs");
+         System.out.println("\n Configuración del podómetro\n ********************************************" + "\n Altura" + ":" + alturaMtrs + "Mtrs" +  
+                            "\n Sexo:"  +  sexo + "\n Longitud zancada" + ":"  +  longitudZancadaMtrs + "Mtrs");
         
-       
+      
 
     }
 
@@ -151,11 +171,15 @@ public class Podometro
      */
     public String diaMayorNumeroPasos() {
         
-        
+        return "a";
+    
         
 
     
     } 
+   
+    
+    
     
     /**
      * Restablecer los valores iniciales del podómetro
@@ -163,8 +187,19 @@ public class Podometro
      * que se establece a MUJER. La marca no varía
      *  
      */    
-    public void reset() {
-
+    public void reset(String nombreMarca) {
+            marca = nombreMarca;
+            altura = 0;
+            sexo = MUJER;
+            longitudZancada = 0;
+            totalPasosLaborables = 0;
+            totalPasosSabado = 0;
+            totalPasosDomingo = 0;
+            totalDistanciaSemana = 0;
+            totalDistanciaFinSemana = 0;
+            tiempo = 0;
+            caminatasNoches = 0;
+            
         
 
     }
